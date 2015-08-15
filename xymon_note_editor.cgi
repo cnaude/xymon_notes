@@ -83,7 +83,7 @@ sub edit_note {
     print <<HTML;
 <CENTER><TABLE BORDER="1" CELLPADDING="3><CAPTION><H2><CENTER>$host [$hosts{$host}]</CENTER></H2></CAPTION>
 <TR><TD ALIGN="CENTER"><form method="POST"><input type="hidden" name="host" value="$host">
-<TEXTAREA ROWS="35" COLS="80" NAME="note" STYLE="background-color:#000066;color:dddddd">
+<TEXTAREA ROWS="35" COLS="80" NAME="note" STYLE="background-color:#000066;color:#dddddd">
 HTML
 if ($note) {
     print $note;
