@@ -1,29 +1,29 @@
 Xymon Dynamic Note Editor
 ================================
 ## About:
-  This note system uses your existing $XYMONHOME/www/notes
-  directory. Each note will be replaced by a zero
-  length file. If the file is 0 bytes then the
-  mod_rewrite rule tells Apache to run the CGI
-  instead. If the file is greater than 0 then it loads
-  just as usual. The body of each note will be stored
-  in a directory of your choice.
+This note system uses your existing $XYMONHOME/www/notes
+directory. Each note will be replaced by a zero
+length file. If the file is 0 bytes then the
+mod_rewrite rule tells Apache to run the CGI
+instead. If the file is greater than 0 then it loads
+just as usual. The body of each note will be stored
+in a directory of your choice.
 
 ## Files included: 
-  * xymon_note.cgi (Note printer)
-  * xymon_note_editor.cgi (Note editor)
-  * htaccess (Sample .htaccess for $XYMONHOME/www/notes)
-  * xymon_note_conv.pl (Simple notes conversion tool)
+* xymon_note.cgi (Note printer)
+* xymon_note_editor.cgi (Note editor)
+* htaccess (Sample .htaccess for $XYMONHOME/www/notes)
+* xymon_note_conv.pl (Simple notes conversion tool)
 
 ## Requirements: 
-  Xymon 4.3.21 or higher
-  Perl
-  Apache(2) with mod_rewrite enabled
+* Xymon 4.3.21 or higher
+* Perl
+* Apache(2) with mod_rewrite enabled
 
 ## Optional:
-  Perl module - HTML::FromText
+Perl module - HTML::FromText
 	
- Thanks for trying out the Xymon Note Editor.
+Thanks for trying out the Xymon Note Editor.
 
 Installation
 ================================
