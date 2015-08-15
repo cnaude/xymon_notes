@@ -10,10 +10,10 @@ Xymon Dynamic Note Editor
   in a directory of your choice.
 
 ## Files included: 
-  xymon_note.cgi (Note printer)
-  xymon_note_editor.cgi (Note editor)
-  htaccess (Sample .htaccess for $XYMONHOME/www/notes)
-  xymon_note_conv.pl (Simple notes conversion tool)
+  * xymon_note.cgi (Note printer)
+  * xymon_note_editor.cgi (Note editor)
+  * htaccess (Sample .htaccess for $XYMONHOME/www/notes)
+  * xymon_note_conv.pl (Simple notes conversion tool)
 
 ## Requirements: 
   Xymon 4.3.21 or higher
