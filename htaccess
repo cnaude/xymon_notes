@@ -1,0 +1,3 @@
+RewriteEngine  on
+RewriteCond %{REQUEST_FILENAME}   !-s
+RewriteRule ^(.*)\.html$          /xymon-cgi/xymon_note.cgi   [T=application/x-httpd-cgi,L]
