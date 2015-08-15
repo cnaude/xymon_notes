@@ -7,8 +7,7 @@ Xymon Dynamic Note Editor
   mod_rewrite rule tells Apache to run the CGI
   instead. If the file is greater than 0 then it loads
   just as usual. The body of each note will be stored
-  in a directory of your choice. If you would like to
-  see a demo just contact me.
+  in a directory of your choice.
 
 ## Files included: 
   xymon_note.cgi (Note printer)
