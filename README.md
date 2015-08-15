@@ -24,8 +24,8 @@ in a directory of your choice.
 
 ## Optional:
 * HTML::FromText
-..* Debian: apt-get install libhtml-fromtext-perl 
-..* RHEL: yum install perl-HTML-FromText
+ * Debian: apt-get install libhtml-fromtext-perl 
+ * RHEL: yum install perl-HTML-FromText
 	
 Thanks for trying out the Xymon Note Editor.
 
