@@ -23,7 +23,9 @@ in a directory of your choice.
 * Apache(2) with mod_rewrite enabled
 
 ## Optional:
-Perl module - HTML::FromText
+* HTML::FromText
+** Debian: apt-get install libhtml-fromtext-perl 
+** RHEL: yum install perl-HTML-FromText
 	
 Thanks for trying out the Xymon Note Editor.
 
