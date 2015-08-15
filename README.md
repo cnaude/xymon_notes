@@ -1,5 +1,4 @@
-# xymon_notes
-Xymon note editor
+Xymon Dynamic Note Editor
 ================================
  About:
   This note system uses your existing $XYMONHOME/www/notes
@@ -18,6 +17,7 @@ Xymon note editor
   xymon_note_conv.pl (Simple notes conversion tool)
 
  Requirements: 
+  Xymon 4.3.21 or higher
   Perl
   Apache(2) with mod_rewrite enabled
 
@@ -27,9 +27,6 @@ Xymon note editor
  Install:
   Read the included INSTALL file.
 
- Author:
-  Chris Naude
-		
  Thanks for trying out the Xymon Note Editor.
 
 Installation
