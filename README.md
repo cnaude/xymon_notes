@@ -18,7 +18,7 @@ in a directory of your choice.
 | xymon_note_conv.pl    | Notes conversion |
 
 ## Requirements: 
-* Xymon 4.3.0 or higher
+* [Xymon 4.3.0](https://www.xymon.com/) or higher
 * Perl
 * Apache(2) with mod_rewrite enabled
 
