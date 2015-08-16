@@ -146,7 +146,7 @@ sub get_note {
 }
 
 sub print_menu{
-    print '<CENTER><TABLE BORDER="1" CELLPADDING="3"><CAPTION><H2><CENTER>Big Brother Notes</CENTER></H2><b></b></CAPTION>';
+    print '<CENTER><TABLE BORDER="1" CELLPADDING="3"><CAPTION><H2><CENTER>Xymon Host Notes</CENTER></H2><b></b></CAPTION>';
     for my $host(sort keys %hosts) {
   print <<HTML;
 <TR><TD>$host</TD><TD>$hosts{$host}</TD>
