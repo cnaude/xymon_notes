@@ -44,6 +44,15 @@ my $xymon_seccgi = '/xymon-seccgi';
 my $xymon_hosts = "$xymon_home/etc/hosts.cfg";
 my $menu = "";
 
+open (FILE, "$xymon_home/etc/xymonmenu.cfg");
+while (<FILE>) {
+  s/\$XYMONSERVERWWWURL/$xymon_web/g;
+  s/\$XYMONSERVERCGIURL/$xymon_cgi/g;
+  s/\$XYMONSERVERSECURECGIURL/$xymon_seccgi/g;
+  $menu .= $_;
+}
+close FILE;
+
 my $remote_sess = param('lock_sess');
 
 my $date = localtime(time);
