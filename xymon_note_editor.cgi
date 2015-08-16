@@ -17,6 +17,8 @@ my $xymon_home = "/opt/xymon/server";
 my $xymon_gifs = "/xymon/gifs";
 # The main web path for Xymon display. 
 my $xymon_web  = "/xymon"; 
+#  Text or HTML IMG tag
+my $logo = "Xymon";
 
 # This is where the data files are stored.
 # Not to be confused with the default notes dir.
@@ -180,7 +182,7 @@ sub print_header {
         s/&XYMWEBDATE/$date/g;
         s/&XYMWEBHOST/$xymon_web/g;
         s/&XYMONBODYHEADER/$menu/g;
-        s/&XYMONLOGO/LOGO/g;
+        s/&XYMONLOGO/$logo/g;
         print;
     }
     close HEAD;
