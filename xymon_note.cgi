@@ -91,41 +91,43 @@ sub get_note {
 }
 
 sub print_header {
-    my $color = shift;
-    print "Content-type: text/html; charset=iso-8859-1\n\n";
-    open (HEAD, "<$xymon_header") or &print_error("I can't open $xymon_header for reading!",'DIE');
-    while (<HEAD>) {
-	if (/META/i && /HTTP-EQUIV/i && /REFRESH/i && /CONTENT/i) { s/<(.*?)>/<!-- Refresh removed -->/g; } # It's a bit hard to edit with a refresh ;)
-	s/&XYMWEBBACKGROUND/$color/g;
-	s/&XYMONSKIN/$xymon_gifs/g;
-	s/&XYMONBODYCSS/$xymon_gifs\/xymonbody.css/g;
-	s/&XYMONBODYMENUCSS/$xymon_web\/menu\/xymonmenu-blue.css/g;
-	s/&XYMWEBHIKEY//g;
-	s/&XYMWEBDATE/$date/g;
-	s/&XYMWEBHOST/$xymon_web/g;
-	s/&XYMONBODYHEADER/$menu/g;
-        s/&XYMONLOGO/$logo/g;
-	print;
-    }
-    close HEAD;
+  my $color = shift;
+  print "Content-type: text/html; charset=iso-8859-1\n\n";
+  open (HEAD, "<$xymon_header") or &print_error("I can't open $xymon_header for reading!",'DIE');
+  while (<HEAD>) {
+    if (/META/i && /HTTP-EQUIV/i && /REFRESH/i && /CONTENT/i) {
+      s/<(.*?)>/<!-- Refresh removed -->/g;
+    } # It's a bit hard to edit with a refresh ;)
+    s/&XYMWEBBACKGROUND/$color/g;
+    s/&XYMONSKIN/$xymon_gifs/g;
+    s/&XYMONBODYCSS/$xymon_gifs\/xymonbody.css/g;
+    s/&XYMONBODYMENUCSS/$xymon_web\/menu\/xymonmenu-blue.css/g;
+    s/&XYMWEBHIKEY//g;
+    s/&XYMWEBDATE/$date/g;
+    s/&XYMWEBHOST/$xymon_web/g;
+    s/&XYMONBODYHEADER/$menu/g;
+    s/&XYMONLOGO/$logo/g;
+    print;
+  }
+  close HEAD;
 }
 
 sub print_footer{
-    my $color = shift;
-    my $xymon_version = "";
-    open (FOOT, "<$xymon_footer") or &print_error("I can't open $xymon_footer for reading!",'DIE');
-    while (<FOOT>) {
-	s/&XYMONBODYFOOTER//g;
-	if (/&XYMONDREL/ && -x "$xymon_home/bin/xymon") {
-                open(CMD, "$xymon_home/bin/xymon --version|");
-                chomp($xymon_version = <CMD>);
-                $xymon_version =~ s/.*?\s+//g;
-                close CMD;
-        }
-    	s/&XYMONDREL/$xymon_version/g;
-	print;
+  my $color = shift;
+  my $xymon_version = "";
+  open (FOOT, "<$xymon_footer") or &print_error("I can't open $xymon_footer for reading!",'DIE');
+  while (<FOOT>) {
+    s/&XYMONBODYFOOTER//g;
+    if (/&XYMONDREL/ && -x "$xymon_home/bin/xymon") {
+      open(CMD, "$xymon_home/bin/xymon --version|");
+      chomp($xymon_version = <CMD>);
+      $xymon_version =~ s/.*?\s+//g;
+      close CMD;
     }
-    close FOOT;
+    s/&XYMONDREL/$xymon_version/g;
+    print;
+  }
+  close FOOT;
 }
 
 # Main 
