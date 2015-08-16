@@ -44,7 +44,7 @@ Installation
 
 6. If you have any existing note files then copy them to the notesdata directory and then empty out the originals. You might want to strip off HTML headers and footers. The xymon_note.cgi will dynamically create the headers and footers based on the name of the hosts. Included in this tarball is a simple conversion tool.
   ```bash
-  for i in `ls $XYMONHOME/www/notes`; do; cat /dev/null > $i; done;
+  for i in $(ls $XYMONHOME/server/www/notes); do > $i; done
   ```
 
 7. Visit your Xymon site and click on a note. You should see an edit button. 
